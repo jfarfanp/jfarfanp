@@ -1,0 +1,550 @@
+HTML: 
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller Mecánico</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header id="main_header">
+        <div class="logo" id="header_logo">
+            <img src="LOGO.png" alt="Logo del Taller Mecánico" id="logo_img">
+        </div>
+        <h1 id="title_logo">MotoExpert</h1>
+        <nav id="main_nav">
+            <ul id="nav_list">
+                <li><a href="#" id="nav_inicio">Inicio</a></li>
+                <li><a href="#" id="nav_nosotros">Nosotros</a></li>
+                <li><a href="#" id="nav_servicios">Servicios</a></li>
+                <li><a href="#" id="nav_noticias">Noticias</a></li>
+                <li><a href="#" id="nav_contacto">Contacto</a></li>
+                <li><a href="#" class="btn_whatsapp" id="whatsapp_btn">WhatsApp</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main_content">
+        <section class="hero" id="hero_section">
+            <h1 id="main_title">Taller Mecánico de Calidad</h1>
+            <p id="hero_subtitle">Trabajamos desde 2012 en Bogotá</p>
+            <a href="#" class="btn_servicios" id="servicios_btn">Nuestros Servicios</a>
+            
+            <div class="form_reserva compact_form" id="reserva_container">
+                <h2 class="text_center mb-3" id="reserva_title">Reserva tu cita</h2>
+                <form id="reservaForm">
+                    <div class="row g-2">
+                        <div class="col-md-6">
+                            <label for="nombre" class="form_label small_label">Nombre:</label>
+                            <input type="text" class="form-control form-control-sm compact_input" id="nombre" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="celular" class="form_label small_label">Celular:</label>
+                            <input type="tel" class="form-control form-control-sm compact_input" id="celular" required>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <label for="email" class="form_label small_label">Email:</label>
+                            <input type="email" class="form-control form-control-sm compact_input" id="email" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="tipoServicio" class="form_label small_label">Servicio:</label>
+                            <select class="form-select form-select-sm compact_input" id="tipoServicio" required>
+                                <option value="">Seleccione</option>
+                                <option value="revision">Revisión</option>
+                                <option value="reparacion">Reparación</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label for="comentarios" class="form_label small_label">Comentarios:</label>
+                            <textarea class="form-control form-control-sm compact_input" id="comentarios" rows="2"></textarea>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <button type="submit" class="btn btn-primary btn-sm w-100 compact_btn" id="submit_btn">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main_footer">
+        <div class="info" id="footer_info">
+            <div id="horario_info">
+                <h3>Horario de Atención</h3>
+                <p>Lunes a Sábado: 08:00 am - 18:00 pm</p>
+            </div>
+            <div id="ubicacion_info">
+                <h3>Dónde Estamos</h3>
+                <p>Cl. 52 Sur #36-42 Bogotá</p>
+            </div>
+            <div id="contacto_info">
+                <h3>Teléfono de Contacto</h3>
+                <p>311 6525416 Cel y/o WhatsApp</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+styles.css
+/* Variables CSS */
+:root {
+    --rojo: #ff0000;
+    --rojo-oscuro: #d40000;
+    --negro: #111;
+    --blanco: #fff;
+    --gris: #f4f4f4;
+    --gris-oscuro: #444;
+    --whatsapp: #25D366;
+    --whatsapp-hover: #128C7E;
+    --sombra: 0 2px 10px rgba(0,0,0,0.3);
+    --sombra-texto: 1px 1px 3px rgba(0,0,0,0.5);
+    --transicion: all 0.3s ease;
+  }
+  
+  /* Estilos generales */
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--gris);
+    color: #333;
+  }
+  
+  /* Header */
+  #main_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: var(--negro);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--sombra);
+  }
+  
+  .logo_container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  #header_logo {
+    width: 70px;
+    height: auto;
+    transition: var(--transicion);
+  }
+  
+  #logo_img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 2px 4px rgba(255,255,255,0.2));
+  }
+  
+  /* Título MotoExpert destacado */
+  #title_logo {
+    color: var(--rojo);
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 
+      0 0 10px rgba(255, 255, 255, 0.7),
+      0 0 20px rgba(255, 0, 0, 0.5);
+    animation: neonGlow 2s infinite alternate;
+  }
+  
+  @keyframes neonGlow {
+    from {
+      text-shadow: 
+        0 0 5px #fff,
+        0 0 10px rgba(255, 0, 0, 0.5);
+    }
+    to {
+      text-shadow: 
+        0 0 10px #fff,
+        0 0 20px rgba(255, 0, 0, 0.8),
+        0 0 30px rgba(255, 0, 0, 0.6);
+    }
+  }
+  
+  /* Navegación */
+  #main_nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+  }
+  
+  #main_nav li {
+    position: relative;
+  }
+  
+  #main_nav li a {
+    text-decoration: none;
+    color: var(--blanco);
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: var(--transicion);
+  }
+  
+  #main_nav li a:hover {
+    color: var(--rojo);
+    background-color: rgba(255,255,255,0.1);
+  }
+  
+  /* Botón de WhatsApp */
+  #whatsapp_btn {
+    background-color: var(--whatsapp);
+    color: var(--blanco);
+    padding: 8px 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transicion);
+    font-weight: 600;
+  }
+  
+  #whatsapp_btn:hover {
+    background-color: var(--whatsapp-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+  
+  /* Sección Hero */
+  #hero_section {
+    text-align: center;
+    background: 
+      linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('FONDO MOTO.png') center center/cover no-repeat;
+    color: var(--blanco);
+    padding: 120px 20px 100px;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  #main_title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+    animation: fadeInDown 1s ease;
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+  
+  #hero_subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    animation: fadeIn 1.5s ease;
+    line-height: 1.5;
+  }
+  
+  #servicios_btn {
+    display: inline-block;
+    background-color: var(--rojo);
+    color: var(--blanco);
+    padding: 14px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: var(--transicion);
+    position: relative;
+    z-index: 2;
+    animation: fadeInUp 1s ease;
+    border: 2px solid transparent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+  
+  #servicios_btn:hover {
+    background-color: transparent;
+    border-color: var(--blanco);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  }
+  
+  /* Formulario de reserva */
+  #reserva_container {
+    position: relative;
+    width: 90%;
+    max-width: 450px;
+    margin: 50px auto 0;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    z-index: 10;
+    animation: fadeIn 1.8s ease;
+  }
+  
+  #reserva_title {
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+    color: #222;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  #reservaForm .form_label {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--gris-oscuro);
+  }
+  
+  #reservaForm .form_control, 
+  #reservaForm .form_select {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    transition: var(--transicion);
+    border-radius: 5px;
+  }
+  
+  #reservaForm .form_control:focus, 
+  #reservaForm .form_select:focus {
+    border-color: var(--rojo);
+    box-shadow: 0 0 0 0.25rem rgba(255, 0, 0, 0.15);
+    outline: none;
+  }
+  
+  #comentarios {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  #submit_btn {
+    padding: 0.7rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    background-color: var(--rojo);
+    border: none;
+    transition: var(--transicion);
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+  }
+  
+  #submit_btn:hover {
+    background-color: var(--rojo-oscuro);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+  
+  /* Footer */
+  #main_footer {
+    background-color: var(--negro);
+    color: var(--blanco);
+    padding: 50px 0 30px;
+    position: relative;
+  }
+  
+  #footer_info {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  #footer_info > div {
+    flex: 1;
+    min-width: 250px;
+    padding: 0 15px;
+  }
+  
+  #footer_info h3 {
+    color: var(--rojo);
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  #footer_info p {
+    margin: 8px 0;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Animaciones */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Media queries para responsividad */
+  @media (max-width: 992px) {
+    #main_title {
+      font-size: 2.5rem;
+    }
+    
+    #hero_subtitle {
+      font-size: 1.2rem;
+    }
+    
+    #title_logo {
+      font-size: 1.6rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #main_header {
+      flex-direction: column;
+      padding: 15px;
+      gap: 15px;
+    }
+    
+    .logo_container {
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+    }
+    
+    #main_nav ul {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    #main_nav li {
+      margin: 5px;
+    }
+    
+    #hero_section {
+      padding: 100px 20px 60px;
+    min-height: auto;
+    }
+    
+    #main_title {
+      font-size: 2rem;
+    }
+    
+    #reserva_container {
+      margin: 30px auto;
+      width: 95%;
+      padding: 25px;
+    }
+    
+    #servicios_btn {
+      padding: 12px 25px;
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #main_title {
+      font-size: 1.8rem;
+    }
+    
+    #hero_subtitle {
+      font-size: 1.1rem;
+    }
+    
+    #title_logo {
+      font-size: 1.4rem;
+    }
+    
+    #reservaForm .row > [class^="col-"] {
+      width: 100%;
+    }
+    
+    #footer_info > div {
+      min-width: 100%;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    #footer_info h3 {
+      margin-bottom: 15px;
+    }
+  }
+
+srip.js:
+
+document.addEventListener("DOMContentLoaded", function () {
+    const reservaForm = document.getElementById("reservaForm");
+
+    reservaForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const nombre = document.getElementById("input-nombre").value;
+        const celular = document.getElementById("input-celular").value;
+        const email = document.getElementById("input-email").value;
+        const tipoVehiculo = document.getElementById("select-tipoVehiculo").value;
+        const tipoServicio = document.getElementById("select-tipoServicio").value;
+        const comentarios = document.getElementById("textarea-comentarios").value;
+
+        if (!nombre || !celular || !email || !tipoVehiculo || !tipoServicio) {
+            alert("Por favor, completa todos los campos obligatorios.");
+            return;
+        }
+
+        const reserva = {
+            nombre,
+            celular,
+            email,
+            tipoVehiculo,
+            tipoServicio,
+            comentarios
+        };
+
+        localStorage.setItem("reserva", JSON.stringify(reserva));
+        alert("Reserva guardada exitosamente.");
+        reservaForm.reset();
+    });
+});
+

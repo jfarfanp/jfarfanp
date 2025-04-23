@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Servicio | MotoExpert</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header id="main_header">
+        <div class="logo" id="header_logo">
+            <img src="/static/images/LOGO.png" alt="Logo MotoExpert" id="logo_img">
+        </div>
+        <h1 id="title_logo">MotoExpert</h1>
+        <nav id="main_nav">
+            <ul id="nav_list">
+                <li><a href="/templates/landing.html" id="nav_inicio">Inicio</a></li>
+                <li><a href="/templates/index.html" id="nav_servicios">Servicios</a></li>
+                <li><a href="#testimonios" id="nav_testimonios">Testimonios</a></li>
+                <li><a href="#galeria" id="nav_galeria">Galería</a></li>
+                <li><a href="#contacto" id="nav_contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="detail-main">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="detail-breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/templates/landing.html">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="/templates/index.html">Servicios</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Mantenimiento Preventivo</li>
+            </ol>
+        </nav>
+
+        <!-- Detalle del Servicio -->
+        <section class="service-detail">
+            <div class="service-images">
+                <div class="main-image">
+                    <img src="/static/images/servicio-detalle1.jpg" alt="Mantenimiento Preventivo">
+                </div>
+                <div class="thumbnail-gallery">
+                    <img src="/static/images/servicio-detalle2.jpg" alt="Mantenimiento 1">
+                    <img src="/static/images/servicio-detalle3.jpg" alt="Mantenimiento 2">
+                    <img src="/static/images/servicio-detalle4.jpg" alt="Mantenimiento 3">
+                </div>
+            </div>
+            
+            <div class="service-info">
+                <h1>Mantenimiento Preventivo</h1>
+                <div class="service-meta">
+                    <span class="price">Desde $150.000</span>
+                    <span class="duration"><i class="far fa-clock"></i> 2-3 horas</span>
+                    <span class="warranty"><i class="fas fa-shield-alt"></i> 3 meses de garantía</span>
+                </div>
+                
+                <div class="service-description">
+                    <h2>Descripción del Servicio</h2>
+                    <p>Nuestro paquete de mantenimiento preventivo está diseñado para mantener tu moto en óptimas condiciones y prevenir fallas costosas. Incluye:</p>
+                    <ul>
+                        <li>Cambio de aceite y filtro</li>
+                        <li>Ajuste y lubricación de cadena</li>
+                        <li>Revisión de frenos (pastillas y líquido)</li>
+                        <li>Chequeo de sistema eléctrico</li>
+                        <li>Revisión de neumáticos y presión</li>
+                        <li>Ajuste general de tornillería</li>
+                        <li>Limpieza y lubricación de componentes</li>
+                    </ul>
+                </div>
+                
+                <div class="service-benefits">
+                    <h2>Beneficios</h2>
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Mayor vida útil del motor</p>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Mejor rendimiento de combustible</p>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Mayor seguridad en carretera</p>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Prevención de fallas costosas</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="/templates/index.html" class="btn-reserve">Reservar este servicio</a>
+            </div>
+        </section>
+
+        <!-- Testimonios -->
+        <section id="testimonios" class="testimonials-section">
+            <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Excelente servicio, mi moto quedó como nueva. Muy profesionales y buen precio."</p>
+                        <div class="testimonial-author">
+                            <img src="/static/images/cliente1.jpg" alt="Cliente 1">
+                            <div>
+                                <h4>Carlos Rodríguez</h4>
+                                <span>Yamaha FZ 2.0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Llevo años confiando en ellos para el mantenimiento de mi moto. Siempre impecable."</p>
+                        <div class="testimonial-author">
+                            <img src="/static/images/cliente2.jpg" alt="Cliente 2">
+                            <div>
+                                <h4>María González</h4>
+                                <span>Honda CB 190</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galería -->
+        <section id="galeria" class="gallery-section">
+            <h2 class="section-title">Galería de Trabajos</h2>
+            <div class="gallery-grid">
+                <img src="/static/images/galeria1.jpg" alt="Trabajo 1">
+                <img src="/static/images/galeria2.jpg" alt="Trabajo 2">
+                <img src="/static/images/galeria3.jpg" alt="Trabajo 3">
+                <img src="/static/images/galeria4.jpg" alt="Trabajo 4">
+                <img src="/static/images/galeria5.jpg" alt="Trabajo 5">
+                <img src="/static/images/galeria6.jpg" alt="Trabajo 6">
+            </div>
+        </section>
+
+        <!-- CTA Final -->
+        <section class="detail-cta">
+            <h2>¿Listo para programar tu mantenimiento?</h2>
+            <p>Nuestros especialistas están listos para atenderte</p>
+            <a href="/templates/index.html" class="btn btn-primary btn-lg">Reservar cita ahora</a>
+        </section>
+    </main>
+
+    <footer id="main_footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>Cl. 52 Sur #36-42, Bogotá</p>
+                <p>Tel: 311 6525416</p>
+                <p>Email: contacto@motoexpert.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Horario</h3>
+                <p>Lunes a Sábado: 8am - 6pm</p>
+                <p>Domingos: Cerrado</p>
+            </div>
+            <div class="footer-section">
+                <h3>Servicios</h3>
+                <ul>
+                    <li><a href="#">Mantenimiento</a></li>
+                    <li><a href="#">Reparaciones</a></li>
+                    <li><a href="#">Diagnóstico</a></li>
+                    <li><a href="#">Personalización</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 MotoExpert. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/script.js"></script>
+    <script>
+        // Script para la galería de imágenes
+        document.addEventListener('DOMContentLoaded', function() {
+            const thumbnails = document.querySelectorAll('.thumbnail-gallery img');
+            const mainImage = document.querySelector('.main-image img');
+            
+            thumbnails.forEach(thumb => {
+                thumb.addEventListener('click', function() {
+                    mainImage.src = this.src;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
