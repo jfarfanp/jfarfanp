@@ -2,7 +2,7 @@
 
 Aplicación web completa para gestión de reservas y servicios de taller mecánico especializado en motocicletas.
 
-![Captura de pantalla de MotoExpert](/static/images/screenshot.jpg)
+![Captura de pantalla de MotoExpert](reseva_taller_moto/static/images/captura_pantalla.png)
 
 ## Características Principales
 
